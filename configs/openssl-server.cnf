@@ -1,0 +1,18 @@
+# OpenSSL server certificate configuration
+
+[ req ]
+default_bits       = 2048
+default_md         = sha256
+distinguished_name = req_dn
+prompt             = no
+
+[ req_dn ]
+CN = localhost
+
+[ v3_server ]
+basicConstraints       = CA:FALSE
+keyUsage               = critical, digitalSignature, keyEncipherment
+extendedKeyUsage       = serverAuth
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid, issuer
+subjectAltName         = DNS:localhost, IP:127.0.0.1
