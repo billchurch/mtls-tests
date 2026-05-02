@@ -110,6 +110,9 @@ CERT_DIR=certs CONF_DIR=configs sh scripts/gen-certs.sh
 
 For a detailed comparison of what is visible on the wire at each TLS version, see [docs/handshake-comparison.md](docs/handshake-comparison.md).
 
+For a visual walkthrough of the mTLS handshake, see the presentation:
+- [mtls-handshake-analysis.pdf](mtls-handshake-analysis.pdf) — PDF format
+
 ## How It Works
 
 1. **`scripts/gen-certs.sh`** generates all certificates using `openssl req` and `openssl x509 -req`. No CA database needed — serial numbers are auto-generated.
